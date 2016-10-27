@@ -1,5 +1,7 @@
 <ion-modal-view class="ionic_datepicker_modal">
-  <span class="close button_close" ng-click="closeIonicDatePickerModal()">X</span>
+  <div class="close" ng-click="closeIonicDatePickerModal()">
+    <span>X</span>
+  </div>
   <ion-header-bar class="header">
     <h1 class="title">{{mainObj.titleLabel || selectedDateEpoch | date : mainObj.dateFormat}}</h1>
   </ion-header-bar>
