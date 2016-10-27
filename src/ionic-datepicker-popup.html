@@ -1,6 +1,8 @@
 <div class="selected_date_full">{{mainObj.titleLabel || selectedDateEpoch | date : mainObj.dateFormat}}</div>
 <div class="date_selection">
-  <span class="close button_close" ng-click="closeIonicDatePickerModal()">X</span>
+  <div class="close" ng-click="closeIonicDatePickerModal()">
+    <span>X</span>
+  </div>
   <div class="row show_nav">
     <div class="col col-10 prev_btn_section col-center" ng-click="prevMonth()">
       <button class="button-clear"
