@@ -96,6 +96,12 @@ angular.module('ionic-datepicker.provider', [])
         closeModal();
       };
 
+      //Clear date
+      $scope.clearIonicDatePickerDate = function () {
+        $scope.mainObj.clearCallback();
+        closeModal();
+      };
+
       //Setting the disabled dates list.
       function setDisabledDates(mainObj) {
         if (!mainObj.disabledDates || mainObj.disabledDates.length === 0) {
@@ -266,7 +272,7 @@ angular.module('ionic-datepicker.provider', [])
         if ($scope.mainObj.showClearButton) {
           buttons.push({
             text: $scope.mainObj.clearLabel,
-            type: 'button_clear',
+            type: 'button_clear_date',
             onTap: function (e) {
               $scope.mainObj.clearCallback();
             }
