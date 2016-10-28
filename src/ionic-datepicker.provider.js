@@ -223,8 +223,11 @@ angular.module('ionic-datepicker.provider', [])
       }
 
       $scope.closeIonicDatePickerModal = function () {
-        console.log('closeIonicDatePickerModal');
-        closeModal();
+        if ($scope.mainObj.templateType.toLowerCase() == 'popup') {
+          $scope.popup.close();
+        } else {
+          closeModal();
+        }
       };
 
       //Open datepicker popup
