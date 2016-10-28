@@ -218,10 +218,12 @@ angular.module('ionic-datepicker.provider', [])
       }
 
       function closeModal() {
+        console.log('closing modal');
         $scope.modal.hide();
       }
 
       $scope.closeIonicDatePickerModal = function () {
+        console.log('closeIonicDatePickerModal');
         closeModal();
       };
 
